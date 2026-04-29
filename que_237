@@ -1,0 +1,14 @@
+# Delete Node In a Linked List
+class Solution {
+    public static void deleteNode(ListNode node) {
+        ListNode temp = node;
+        ListNode prev = null;
+        while(temp.next != null){
+            temp.val = temp.next.val;
+            prev = temp;
+            temp = temp.next;
+        }
+        prev.next = null;
+        
+    }
+}
